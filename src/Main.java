@@ -21,7 +21,9 @@ public class Main {
             OutputManager.displayMessage("--------------------------------------------------");
             OutputManager.displayMessage("Situación actual:");
             // Puedes mostrar información adicional aquí, como el entorno o inventario del jugador
-
+            // ToDo: mostrar entorno del jugador
+            
+            // ToDo: ofrecer inputs para deciciones
             String decision = PlayerInput.getPlayerDecision(scanner);
 
             // Maneja la decisión del jugador
