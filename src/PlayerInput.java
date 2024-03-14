@@ -7,8 +7,8 @@ class PlayerInput {
     }
     
 
-	public static String ParseCommand(String decision) {
-		// TODO Auto-generated method stub
+	public static String parseCommand(String decision) {
+	 
 		return null;
 	}
 }

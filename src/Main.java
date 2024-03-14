@@ -17,10 +17,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (juegoEnProgreso) {
-            // Muestra la situación actual al jugador y obtén la decisión
+            // situación actual al jugador
             OutputManager.displayMessage("--------------------------------------------------");
             OutputManager.displayMessage("Situación actual:");
-            // Puedes mostrar información adicional aquí, como el entorno o inventario del jugador
             // ToDo: mostrar entorno del jugador
             
             // ToDo: ofrecer inputs para deciciones

@@ -1,6 +1,14 @@
-hola
-chau
-pero
-para
-pino
-dino
+Despiertas lentamente. Al abrir los ojos, te encuentras en una habitación desconocida. La luz tenue se filtra por las cortinas, revelando muebles antiguos y polvorientos. El aire es pesado y huele a humedad.
+A tu alrededor vez la cama en la que despertaste, un viejo ropero, una ventana tapeada, un sillon derruido y una puerta cerrada.
+cama
+vas a la cama en la que despertaste, cubierta con sábanas gastadas y una manta descolorida, ocupa un rincón sombrío de la habitación. El colchón, hundido por el paso del tiempo, parece ofrecer un descanso poco reconfortante. .
+investigar cama
+en la superficie de la cama no notas nada irregular, pero al levantar el colchon encuentras un {item} recorte de diario
+ropero
+vas al viejo ropero en el corner de la habitacion. Sus puertas cerradas parecen ocultar secretos olvidados, mientras que el polvo acumulado en sus estantes sugiere que ha pasado mucho tiempo desde que se abrieron. 
+puerta
+te diriges a la unica puerta de la habitacion. De madera desgastada y con grietas en su superficie, permanece cerrada con firmeza. 
+sillon
+caminas hacia el sillon. Tapizado en terciopelo desgastado y descolorido. Su respaldo inclinado y sus brazos gastados invitan al descanso, aunque su superficie está marcada por años de uso.
+ventana
+te diriges hacia la ventana, tapiada con tablones de madera y cubierta de polvo y telarañas, se alza como un recordatorio silencioso de la desolación que reina fuera de esta habitación. A través de las grietas entre las tablas, apenas se filtra la luz del sol, arrojando débiles rayos de esperanza en el sombrío interior.

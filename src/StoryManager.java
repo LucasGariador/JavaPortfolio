@@ -2,20 +2,39 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-class StoryManager {
-    private static Map<String, String> storyProgression = new HashMap<>();
+enum Locations{
+	cama,
+	ropero,
+	puerta,
+	sillon,
+	ventana
+}
+enum Actions{
+	Inventario,
+	Ir,
+	Usar
+}
 
+class StoryManager {
+	public static Locations locations;
+	public static String currentLocation;
+    private static Map<String, String> storyProgression = new HashMap<>();
+    private static Map<String, String> storyDecisions = new HashMap<>();
+    private static Map<String, String> storyObjects = new HashMap<>();
+    
     public static void initializeStory() {
-        // Lee el archivo de texto y carga la historia en el mapa
-        loadStoryFromFile("historia.txt");
+        // Lee los archivos de texto
+        loadStoryFromFile("historia.txt", storyProgression);
+        loadStoryFromFile("decisions.txt", storyDecisions);
+        loadStoryFromFile("objetos.txt", storyObjects);
     }
 
-    private static void loadStoryFromFile(String filePath) {
+    private static void loadStoryFromFile(String filePath, Map<String, String> map) {
         try (Scanner scanner = new Scanner(StoryManager.class.getResourceAsStream(filePath))) {
             while (scanner.hasNextLine()) {
                 String decision = scanner.nextLine();
                 String storyLine = scanner.nextLine();
-                storyProgression.put(decision, storyLine);
+                map.put(decision, storyLine);
             }
         } catch (Exception e) {
             OutputManager.displayMessage("Error al cargar la historia desde el archivo: " + e.getMessage());
@@ -23,20 +42,13 @@ class StoryManager {
     }
 
     public static void handleDecision(String decision) {
-        // Analizar y procesar comandos especiales
-        String commandTarget = PlayerInput.ParseCommand(decision);
+        // Inputs
+        String commandTarget = PlayerInput.parseCommand(decision);
 
-        // Tomar decisiones basadas en comandos especiales o decisiones regulares
         if (commandTarget != null) {
             handleSpecialCommand(commandTarget);
         } else {
-            // Lógica para manejar decisiones regulares
-            if (storyProgression.containsKey(decision)) {
-                OutputManager.displayMessage(storyProgression.get(decision));
-            } else {
-                OutputManager.displayMessage("¡Ups! Algo salió mal en la historia. Fin del juego.");
-                // Puedes manejar esta situación de acuerdo a tus necesidades
-            }
+        	OutputManager.displayMessage("Ingrese un comando");
         }
     }
 
